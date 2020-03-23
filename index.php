@@ -7,6 +7,11 @@
 </head>
 <body>
     <?php
+        require_once 'ContaBanco.php';
+
+        $pessoa1 = new ContaBanco();
+
+        $pessoa2 = new ContaBanco();
     ?>
 </body>
 </html>
