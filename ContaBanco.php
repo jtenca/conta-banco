@@ -34,9 +34,9 @@ class ContaBanco {
 
     public function depositar($valor) {
         if ($this->getStatus()) {
-            $this->setSaldo($this->getSaldo() + $valor)
+            $this->setSaldo($this->getSaldo() + $valor);
         } else {
-            echo "CONTA FECHADA."
+            echo "CONTA FECHADA.";
         }
     }
 
@@ -45,22 +45,22 @@ class ContaBanco {
             if ($this->getSaldo() > $valor) {
                 $this->setSlado($this->getSaldo - $valor);
             } else {
-                echo "SALDO INSUFICIENTE."
+                echo "SALDO INSUFICIENTE.";
             }
         } else {
-            echo "CONTA NÃO ESTÁ ABERTA."
+            echo "CONTA NÃO ESTÁ ABERTA.";
         }
     }
 
     public function pagarMensal() {
-        if ($this->getTipo()) == "CC" {
+        if ($this->getTipo() == "CC") {
             $valor = 12;
-        } elseif ($this->getTipo == "CP") {
+        } else if ($this->getTipo() == "CP") {
             $valor = 20;
         } 
         
         if ($this->getStatus()) {
-            $this->setSaldo($this->getSaldo() - $valor)
+            $this->setSaldo($this->getSaldo() - $valor);
         } else {
             echo "PROBLEMAS COM A CONTA.";
         }
@@ -73,7 +73,7 @@ class ContaBanco {
         $this->setSaldo(0);
         $this->setStatus(false);
 
-        echo "CONTA CRIADA COM SUCESSO"
+        echo "CONTA CRIADA COM SUCESSO";
 
     }
 
@@ -83,7 +83,7 @@ class ContaBanco {
 
     function setNumConta($num) {
         $this->numConta = $num;
-
+        
     }
 
     function getTipoConta() {
